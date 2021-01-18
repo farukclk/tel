@@ -1,6 +1,3 @@
-import time
-
-
 
 
 list=["312","0312",
@@ -18,5 +15,4 @@ for i in range(62):
     with open("tel.txt","r") as file:
         for  ii in file:
             print(list[i]+ii,end="")
-            time.sleep(0.001)
-    time.sleep(5)
+  
