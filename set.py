@@ -28,6 +28,8 @@ for i in range(len(list)):
             print(list[i]+ii,end="")
     f=open(".log.txt","w")
     for no, b in list:
-     if no!=0:
+     if no==0 and len(list)==0:
+      os.system("touch taramaBitti")
+     elif no!=0:
       f.write(str(b)+" ")
     f.close()
