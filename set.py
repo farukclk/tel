@@ -23,7 +23,7 @@ else:
  for i in list:
   f.write(str(i)+" ")
 
-list2=list[]
+list2=list[:]
 for i in list:
  with open("tel.txt","r") as file:
   for  ii in file:
