@@ -1,6 +1,3 @@
-
-  GNU nano 3.2                                                                                set.py                                                                                 Modified  
-
 import time, os, sys
 
 if os.path.isfile(".log.txt"):
@@ -26,8 +23,9 @@ else:
 list2=list[:]
 for i in list:
  with open("tel.txt","r") as file:
-  for  ii in file:
-     print(str(i).strip()+ii.strip())
+  for ii in file:
+     tmp=str(i)+ii.strip()
+     print(tmp)
   if len(list2)==0:
     os.system("touch taramaBitti")
     os.system("rm .log.txt")
