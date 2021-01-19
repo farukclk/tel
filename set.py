@@ -26,12 +26,12 @@ for i in list:
   for ii in file:
      tmp=str(i)+ii.strip()
      print(tmp)
-  if len(list2)==0:
+  if len(list2)==1:
     os.system("touch taramaBitti")
     os.system("rm .log.txt")
     exit()
   f=open(".log.txt","w")
   list2=list2[1:]
-  for no, b in list2:
+  for b in list2:
     f.write(str(b)+" ")
   f.close()
