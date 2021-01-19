@@ -12,7 +12,7 @@ if lo!="" and os.path.isfile(".cap") and os.path.isfile(".mac"):
    cap=input("cap file   : ")
    os.system("rm .log.txt")
    open(".mac","w").write(mac)
-   open("cap","w").write(cap)
+   open(".cap","w").write(cap)
 else:
    mac=input("mac address: ")
    cap=input("cap file   : ")
