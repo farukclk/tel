@@ -5,8 +5,8 @@ if lo!="" and os.path.isfile(".cap") and os.path.isfile(".mac"):
  
   key=input("Onceki tarama devam ettirilsin mi? [y/n] : ")
   if key.strip()=="y" or key.strip=="Y":
-   mac=open(".mac","r").read()
-   cap=open(".cap","r").read()
+   mac=open(".mac","r").read().strip()
+   cap=open(".cap","r").read().strip()
   else:
    os.system("rm .log.txt")
    mac=input("mac address: ")
