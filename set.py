@@ -29,5 +29,5 @@ for i in range(len(list)):
     f=open(".log.txt","w")
     for no, b in list:
      if no!=0:
-      f.write(b+" ")
+      f.write(str(b)+" ")
     f.close()
