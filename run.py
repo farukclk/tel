@@ -1,5 +1,7 @@
 import os, sys
-if os.path.isfile(".log.txt") and os.path.isfile(".cap") and os.path.isfile(".mac"):
+os.system("touch .log.txt")
+lo=open(".log.txt","r").read()
+if lo!="" and os.path.isfile(".cap") and os.path.isfile(".mac"):
  
   key=input("Onceki tarama devam ettirilsin mi? [y/n] : ")
   if key.strip()=="y" or key.strip=="Y":
@@ -19,5 +21,3 @@ else:
    open("cap","w").write(cap)
 
 os.system("python3 set.py | aircrack-ng -w - -b " + mac + " " + cap)
-print(mac)
-print(cap)
