@@ -1,6 +1,6 @@
 import os, sys
 os.system("sudo apt install aircrack-ng -y ")
-os.system("sudo touch .log.txt")
+os.system("touch .log.txt")
 lo=open(".log.txt","r").read()
 if lo!="" and os.path.isfile(".cap") and os.path.isfile(".mac"):
  
