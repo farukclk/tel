@@ -23,4 +23,4 @@ else:
    open(".mac","w").write(mac)
    open(".cap","w").write(cap)
 
-os.system("python3 set.py | aircrack-ng -w - -b " + mac + " " + cap)
+os.system("sudo python3 set.py | sudo aircrack-ng -w - -b " + mac + " -l sifreler.txt "+ cap)
