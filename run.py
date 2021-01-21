@@ -40,8 +40,6 @@ if key.strip().lower()=="y":
    cap=open(f".{s}cap","r").read().strip()
    system(f"python3 set.py | john --restore={s} | aircrack-ng -w - -b {mac} -l .{s}pass.txt " + cap)
    system(f"cat .{s}pass.txt >> passwords.txt")
-  else:
-      run()
 else:
    run()
 
