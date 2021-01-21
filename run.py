@@ -9,14 +9,12 @@ if lo!="" and os.path.isfile(".cap") and os.path.isfile(".mac"):
    mac=open(".mac","r").read().strip()
    cap=open(".cap","r").read().strip()
   else:
-   os.system("rm .log.txt")
    mac=input("mac address: ")
    cap=input("cap file   : ")
    os.system("rm .log.txt")
    open(".mac","w").write(mac)
    open(".cap","w").write(cap)
 else:
-   os.system("rm .log.txt")
    mac=input("mac address: ")
    cap=input("cap file   : ")
    os.system("rm .log.txt")
