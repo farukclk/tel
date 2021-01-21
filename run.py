@@ -1,4 +1,5 @@
 import os, sys
+os.system("rm .pass")
 os.system("sudo apt install aircrack-ng -y ")
 os.system("touch .log.txt")
 lo=open(".log.txt","r").read()
@@ -20,4 +21,5 @@ else:
    open(".mac","w").write(mac)
    open(".cap","w").write(cap)
 
-os.system("python3 set.py | aircrack-ng -w - -b " + mac + " -l sifreler.txt "+ cap)
+os.system("python3 set.py | aircrack-ng -w - -b " + mac + " -l .pass.txt "+ cap)
+os.system("cat .pass.txt >> pass.txt")
