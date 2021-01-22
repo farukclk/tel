@@ -11,7 +11,7 @@ list=["312","0312",
 "0545","546","0546","547","0547","548","0548","549","0549"]
 
 for i in list:
- with open("tel.txt","r") as file:
+ with open(".tel.txt","r") as file:
   for ii in file:
      tmp=str(i)+ii.strip()
      print(tmp)
