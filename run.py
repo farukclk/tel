@@ -39,7 +39,7 @@ print()
 
 if key.strip().lower()=="y":
    tmp=listdir(".")[:]
-   sessions=list(filter(lambda n: n.endswith(".rec"),tmp))
+   sessions=list(filter(lambda n.rstrip(".rec"): n.endswith(".rec"),tmp))
    print("   ||   ".join(sessions),"\n")
    s=input("oturum ismi: ").strip()
    control(s)
