@@ -19,7 +19,7 @@ def yaz(dosya, value):
     d.close()
 
 def control(f): #otrum ismi
-   file="." + f + "pass.txt"
+   file=f + "_pass.txt"
    if path.isfile(file):
        print(f" '{file}' zaten kirildlmis, sifre:")
        system("cat "+ file)
@@ -69,7 +69,7 @@ else:
    cap=input("cap file   : ").strip()
    yaz(f".{s}mac", mac)
    yaz(f".{s}cap", cap)
-   system(f"python3 set.py | john --stdin --session={s} --stdout | aircrack-ng -w - -b {mac} -l .{s}pass.txt {cap}")
-   system(f"cat .{s}pass.txt >> passwords.txt")
+   system(f"python3 set.py | john --stdin --session={s} --stdout | aircrack-ng -w - -b {mac} -l {s}_pass.txt {cap}") 
+   system(f"cat {s}_pass.txt >> passwords.txt")
 
 
