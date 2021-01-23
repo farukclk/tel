@@ -22,7 +22,7 @@ def control(f): #otrum ismi
    file=f + "_pass.txt"
    if path.isfile(file):
        print(f" '{file}' zaten kirildlmis, sifre:")
-       system("cat "+ file)
+       system("cat "+ file + "_pass.txt")
        exit()
    
 
