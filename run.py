@@ -1,6 +1,5 @@
 from os import system, path, listdir
 
-
 system("sudo apt install aircrack-ng john -y ")
 print()
 if not ".tel.txt" in listdir("."):
