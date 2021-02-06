@@ -4,14 +4,12 @@ from os import system, path, listdir
 system("sudo apt install aircrack-ng john -y ")
 print()
 if not ".tel.txt" in listdir("."):
-   system("sudo apt install crunch -y")
-   system("crunch 7 7 0123456789 -o .tel.txt")
+   system("unzip tel.zip&&rm tel.zip&&mv tel.txt .tel.txt")
 
 def macKontrol(mac):
     if len(mac)!=17 or mac.count(":")!=5:
         print(" [!] HATALI MAC ADRESI")
         exit()
-   
 
 def yaz(dosya, value):
     d=open(dosya, "w")
